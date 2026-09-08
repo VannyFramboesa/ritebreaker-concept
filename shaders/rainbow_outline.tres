@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dstds26gmpl47"]
+
+[ext_resource type="Shader" uid="uid://mxvejffckiq3" path="res://shaders/rainbow_outline.gdshader" id="1_8ysyh"]
+
+[resource]
+shader = ExtResource("1_8ysyh")
+shader_parameter/line_thickness = 2.9350001394125
+shader_parameter/sin_frequency = 0.20900000666762
+shader_parameter/sin_offset = 26.1290012411275
+shader_parameter/light_offset = 0.6450000306375

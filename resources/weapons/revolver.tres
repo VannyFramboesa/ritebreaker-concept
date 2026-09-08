@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="SingleShot" format=3 uid="uid://dnekm41rkavll"]
+
+[ext_resource type="PackedScene" uid="uid://ckggj8650rmkm" path="res://scenes/projectile.tscn" id="1_qcmms"]
+[ext_resource type="Script" uid="uid://tisypnvera85" path="res://scenes/SingleShot.gd" id="2_ymkch"]
+[ext_resource type="Texture2D" uid="uid://c2rjarcclavbs" path="res://assets/Fox/Weapon/revolver_icon.png" id="3_himro"]
+[ext_resource type="Script" uid="uid://c3fhl6wbbtxjt" path="res://scenes/Upgrade.gd" id="4_himro"]
+[ext_resource type="Script" uid="uid://btyjvxdobr1x8" path="res://scenes/ProjectileUpgrade.gd" id="5_kgaq5"]
+
+[sub_resource type="Resource" id="Resource_4g0gb"]
+script = ExtResource("5_kgaq5")
+damage = 1.0
+description = "+1 Dano"
+metadata/_custom_type_script = "uid://btyjvxdobr1x8"
+
+[sub_resource type="Resource" id="Resource_emsdo"]
+script = ExtResource("5_kgaq5")
+cooldown = -0.2
+description = "-0.2s Cooldown"
+metadata/_custom_type_script = "uid://btyjvxdobr1x8"
+
+[sub_resource type="Resource" id="Resource_l1bg5"]
+script = ExtResource("5_kgaq5")
+speed = 200.0
+description = "+200 Velocidade"
+metadata/_custom_type_script = "uid://btyjvxdobr1x8"
+
+[sub_resource type="Resource" id="Resource_hdbxe"]
+script = ExtResource("5_kgaq5")
+damage = 2.0
+description = "+2 Dano"
+metadata/_custom_type_script = "uid://btyjvxdobr1x8"
+
+[sub_resource type="Resource" id="Resource_cste0"]
+script = ExtResource("5_kgaq5")
+cooldown = -0.1
+description = "-0.1s Cooldown"
+metadata/_custom_type_script = "uid://btyjvxdobr1x8"
+
+[resource]
+script = ExtResource("2_ymkch")
+title = "Revolver"
+texture = ExtResource("3_himro")
+damage = 1.5
+cooldown = 0.9
+speed = 600.0
+upgrades = Array[ExtResource("4_himro")]([SubResource("Resource_4g0gb"), SubResource("Resource_emsdo"), SubResource("Resource_l1bg5"), SubResource("Resource_hdbxe"), SubResource("Resource_cste0")])
+metadata/_custom_type_script = "uid://tisypnvera85"

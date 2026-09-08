@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Enemy" format=3 uid="uid://qbuclwc3eqjq"]
+
+[ext_resource type="Script" uid="uid://75f4qeyml7hd" path="res://scenes/EnemyType.gd" id="1_ynh0m"]
+[ext_resource type="Texture2D" uid="uid://c66iiqeduo2wr" path="res://assets/Enemy/Shotgun_Cultist_1.png" id="2_ub8l2"]
+
+[resource]
+script = ExtResource("1_ynh0m")
+title = "Shotgun_Cultist"
+texture = ExtResource("2_ub8l2")
+health = 2.0
+damage = 6.0
+metadata/_custom_type_script = "uid://75f4qeyml7hd"

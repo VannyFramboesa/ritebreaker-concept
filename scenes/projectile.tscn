@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://ckggj8650rmkm"]
+
+[ext_resource type="Script" uid="uid://cfy4mc7byqt4w" path="res://scenes/projectile.gd" id="1_c8fcr"]
+[ext_resource type="Texture2D" uid="uid://bmvvjesfm2fla" path="res://assets/Fox/Weapon/projectile.png" id="2_q3m7n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_softn"]
+size = Vector2(12, 12)
+
+[sub_resource type="Gradient" id="Gradient_c8fcr"]
+colors = PackedColorArray(0.6862745, 0.23137255, 0, 1, 1, 0.8117647, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_q3m7n"]
+gradient = SubResource("Gradient_c8fcr")
+
+[sub_resource type="Curve" id="Curve_softn"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.3370787), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_6q2a6"]
+curve = SubResource("Curve_softn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_c8fcr"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 5.34
+initial_velocity_min = -10.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 73.06, 0)
+scale_min = 1.5
+scale_max = 1.5
+scale_curve = SubResource("CurveTexture_6q2a6")
+color_ramp = SubResource("GradientTexture1D_q3m7n")
+turbulence_influence_max = 0.20600002
+
+[node name="projectile" type="Area2D" unique_id=345464774]
+scale = Vector2(1.5, 1.5)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_c8fcr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=47824244]
+position = Vector2(2.3841858e-07, 2.3841858e-07)
+texture = ExtResource("2_q3m7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=940165287]
+shape = SubResource("RectangleShape2D_softn")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=444812824]
+rect = Rect2(-10.666667, -10.666667, 22, 21.333334)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=206922738]
+amount = 13
+process_material = SubResource("ParticleProcessMaterial_c8fcr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]

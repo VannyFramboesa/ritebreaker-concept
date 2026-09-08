@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Enemy" format=3 uid="uid://bigaytc5k5u5d"]
+
+[ext_resource type="Script" uid="uid://75f4qeyml7hd" path="res://scenes/EnemyType.gd" id="1_78cog"]
+[ext_resource type="Script" uid="uid://yt16v3d3ysr0" path="res://scenes/PickupResource.gd" id="1_miemr"]
+[ext_resource type="Resource" uid="uid://oxermnibg8kp" path="res://resources/Pickups/red_soul.tres" id="2_i5wyy"]
+[ext_resource type="Texture2D" uid="uid://cue2wq5othqwu" path="res://assets/Enemy/Warrior_Cultist.png" id="2_i8xv2"]
+
+[resource]
+script = ExtResource("1_78cog")
+title = "Warrior_Cultist"
+texture = ExtResource("2_i8xv2")
+health = 6.0
+damage = 2.0
+drops = Array[ExtResource("1_miemr")]([ExtResource("2_i5wyy")])
+metadata/_custom_type_script = "uid://75f4qeyml7hd"

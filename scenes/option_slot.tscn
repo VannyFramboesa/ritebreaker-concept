@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cokoc6o5xpn2q"]
+
+[ext_resource type="Texture2D" uid="uid://c2rjarcclavbs" path="res://assets/Fox/Weapon/revolver_icon.png" id="1_je35h"]
+[ext_resource type="Script" uid="uid://cx5i1v74cwwsa" path="res://scenes/option_slot.gd" id="2_11gh2"]
+[ext_resource type="FontFile" uid="uid://ca1d8vv31rihs" path="res://assets/BROKEN15.TTF" id="2_bux6k"]
+[ext_resource type="Texture2D" uid="uid://ddsk5ffr3sw02" path="res://assets/gui/gui_1.png" id="3_11gh2"]
+
+[node name="OptionSlot" type="TextureButton" unique_id=1702323563]
+custom_minimum_size = Vector2(315, 48)
+offset_right = 315.0
+offset_bottom = 48.0
+mouse_filter = 1
+texture_normal = ExtResource("1_je35h")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("2_11gh2")
+
+[node name="Label" type="Label" parent="." unique_id=1204039720]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 4.0
+offset_right = 101.0
+offset_bottom = 44.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5686275)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bux6k")
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="." unique_id=359872039]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 6.0
+offset_right = 298.0
+offset_bottom = 40.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5686275)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bux6k")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1594765640]
+show_behind_parent = true
+custom_minimum_size = Vector2(315, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_11gh2")
+region_rect = Rect2(-0.17547989, 0.05683136, 64.2995, 64.152596)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Enemy" format=3 uid="uid://cr822jbwm1w6w"]
+
+[ext_resource type="Script" uid="uid://75f4qeyml7hd" path="res://scenes/EnemyType.gd" id="1_cmm6s"]
+[ext_resource type="Script" uid="uid://yt16v3d3ysr0" path="res://scenes/PickupResource.gd" id="1_v7b3e"]
+[ext_resource type="Resource" uid="uid://cbv7jj7aj8onq" path="res://resources/Pickups/blue_soul.tres" id="2_7prut"]
+[ext_resource type="Texture2D" uid="uid://iv7jlk1736r4" path="res://assets/Enemy/Dagger_Cultist_1.png" id="2_mj2e1"]
+
+[resource]
+script = ExtResource("1_cmm6s")
+title = "Dagger_Cultist"
+texture = ExtResource("2_mj2e1")
+health = 1.0
+damage = 1.0
+drops = Array[ExtResource("1_v7b3e")]([ExtResource("2_7prut")])
+metadata/_custom_type_script = "uid://75f4qeyml7hd"

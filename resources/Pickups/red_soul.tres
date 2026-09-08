@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Soul" format=3 uid="uid://oxermnibg8kp"]
+
+[ext_resource type="Texture2D" uid="uid://bql2lmqhwmj2u" path="res://assets/souls/red_soul.png" id="1_3pw2b"]
+[ext_resource type="Script" uid="uid://bmkx6x4caprpk" path="res://scenes/soul.gd" id="2_gv6nm"]
+
+[resource]
+script = ExtResource("2_gv6nm")
+XP = 2.0
+title = "Red Soul"
+icon = ExtResource("1_3pw2b")
+description = "Da um pouco a mais de xp"
+metadata/_custom_type_script = "uid://bmkx6x4caprpk"

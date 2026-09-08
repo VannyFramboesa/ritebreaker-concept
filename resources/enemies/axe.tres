@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Enemy" format=3 uid="uid://cb0pauol2dvx6"]
+
+[ext_resource type="Script" uid="uid://yt16v3d3ysr0" path="res://scenes/PickupResource.gd" id="1_2ostk"]
+[ext_resource type="Script" uid="uid://75f4qeyml7hd" path="res://scenes/EnemyType.gd" id="1_68dip"]
+[ext_resource type="Texture2D" uid="uid://cpkxrh3k8g0e6" path="res://assets/Enemy/Axe_Cultist_1.png" id="2_3wy45"]
+[ext_resource type="Resource" uid="uid://cbv7jj7aj8onq" path="res://resources/Pickups/blue_soul.tres" id="2_ewbkf"]
+
+[resource]
+script = ExtResource("1_68dip")
+title = "Axe_Cultist"
+texture = ExtResource("2_3wy45")
+health = 2.0
+damage = 3.0
+drops = Array[ExtResource("1_2ostk")]([ExtResource("2_ewbkf")])
+metadata/_custom_type_script = "uid://75f4qeyml7hd"
